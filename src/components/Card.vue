@@ -23,6 +23,8 @@
   display: flex;
   flex-direction: column;
   min-width: 100%;
+  width: 80%;
+  height: 450px;
   padding: 10px 0px;
 }
 h3{
@@ -36,8 +38,8 @@ span {
 }
 
 .item .image-contianer{
-  width: auto;
-  height: auto;
+  width: 100%;
+  min-width: 100%;
   overflow: hidden;
 }
 
