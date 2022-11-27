@@ -1,23 +1,9 @@
-<script setup lang="ts">
-import { onMounted, ref } from "vue"
-import axios from 'axios'
-import Main from './components/Main.vue'
-const informationAboutAvatar = ref([])
-
-async function getData() {
-  const { data } = await axios.get('https://rickandmortyapi.com/api/character')
-  informationAboutAvatar.value = data.results
-}
-
-onMounted(async()=> {
-  await getData()
-})
-</script>
 
 <template>
-  <main>
-    <Main :informationAboutAvatar="informationAboutAvatar" />
-  </main>
+  <router-link to="/">Home</router-link>
+  <div>
+    <router-view></router-view>
+  </div>
 </template>
 
 <style scoped>
