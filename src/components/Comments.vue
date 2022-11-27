@@ -30,13 +30,13 @@ async function sendComment (characterName: string) {
         author: 'Adxell Arango' 
     }
 
-    await axios.post('http://localhost:5000/api/comment', dataToSend)
+    await axios.post('https://back-microservice-production.up.railway.app/api/comment', dataToSend)
     inputComment.value = ''
     await getComments()
 }
 
 async function getComments () {
-    const { data } = await axios.get(`http://localhost:5000/api/comment/${id}`)
+    const { data } = await axios.get(`https://back-microservice-production.up.railway.app/api/comment/${id}`)
     comments.value = data.message;
 }
 
