@@ -22,7 +22,7 @@ const id: string = useRoute().params.id.toString()
 const comments = ref<IComment[]>([]) 
 
 async function sendComment (characterName: string) {
-    if(inputComment.value.trim().length < 0) return
+    if(inputComment.value.trim().length <= 0) return
     const dataToSend = {
         comments: inputComment.value,
         avatarName: characterName,
